@@ -1,0 +1,189 @@
+.header
+  &__top
+    background-color: #fff
+  &__top-inner
+    padding: 0rem 10rem
+    display: flex
+    justify-content: space-between
+    align-items: center
+    height: 8rem  
+  &__logo
+    width: 10.8rem
+    height: 3.5rem
+    margin-right: 1rem
+  &__nav-list
+    display: flex
+    justify-content: space-between
+  &__nav-item
+    margin-right: 3.2rem
+    font-size: 1.4rem
+    font-weight: 500
+    line-height: 2rem
+    transition: .5s
+    &:last-child
+      margin-right: 2.4rem
+    &:hover
+      color: $text-color-title
+    &:active
+      color: $accent-color
+  &__contacts
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__top-btn    
+    margin-right: 2.4rem    
+    background: transparent
+    text-transform: uppercase
+    font-size: 1.2rem
+    font-weight: 500
+    line-height: 1.5rem
+    letter-spacing: 1px
+    color: $accent-color
+    border: 2px solid $accent-color
+    padding: 0.8rem 2.4rem
+    border-radius: 1rem
+    transition: .5s
+    &:hover
+      color: $text-color-white
+      background-color: $accent-color
+    &:active 
+      transform: scale(0.88)
+  &__top-btn-burger
+    display: none
+  &__tel
+    font-size: 1.4rem
+    line-height: 2rem
+  /*============BODY=========*/
+  &__video
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    min-width: 100vw
+    min-height: 100vh
+    z-index: -1
+    background-size: cover
+  &__body-inner
+    color: $text-color-header
+    max-width: 70%  
+    padding: 15rem 10rem 0rem
+  &__title
+    font-size: 6.6rem
+    font-weight: 700
+    line-height: 7.8rem
+    margin-bottom: 4.8rem
+    & span
+      letter-spacing: 3px
+  &__subtitle
+    font-size: 3.6rem
+    line-height: 4.3rem
+    margin-bottom: 2.4rem
+    letter-spacing: px
+  &__text
+    font-size: 1.6rem
+    font-weight: 500
+    line-height: 2.6rem
+    margin-bottom: 2.4rem
+@media (max-width: 1310px) 
+  .header
+    &__top-inner
+      padding: 0rem 6rem
+    &__nav-item
+      margin-right: 2.4rem
+    &__body-inner
+      padding: 7rem 6rem 0rem
+@media (max-width: 1200px) 
+  .header
+    &__nav-item
+      font-size: 1.2rem
+    &__top-btn    
+      margin-right: 1.54rem
+      font-size: 1.1rem
+      line-height: 1.3rem
+@media (max-width: 1100px) 
+  .header
+      &__contacts
+        display: flex
+        align-items: flex-end
+        flex-direction: column-reverse
+      &__top-btn    
+        margin-right: 0    
+        font-size: 1.1rem
+        line-height: 1.3rem
+        padding: 0.8rem 1.3rem
+      &__tel
+        margin-bottom: .6rem
+      &__title
+        font-size: 4.8rem
+        line-height: 5.2rem
+      &__subtitle
+        font-size: 2.4rem
+        line-height: 3.4rem
+        max-width: 48rem
+@media (max-width: 950px) 
+  .header 
+    &__nav
+      position: fixed
+      top: 6%
+      right: 0
+      height: 100vh
+      z-index: 20
+      transform: translateX(100%)
+      transition: .8s
+    &__nav--active
+      transform: translateX(-8%)
+    &__nav-list
+      flex-direction: column
+      align-items: flex-end      
+    &__nav-item
+      margin-bottom: 1.6rem  
+      color: $text-color-white
+      margin-right: 1.6rem
+      &:last-child
+        margin-right: 1.6rem
+    &__top-inner
+      height: 3.6rem
+      padding: 0rem 4.8rem 0rem 6rem
+    &__logo
+      width: 6.3rem
+      height: 2rem
+      margin-right: 1rem
+    &__top-btn span
+      display: none
+    &__top-btn
+      display: none
+    &__top-btn-burger
+      display: block
+      background: url("../images/icons/phone-header.svg") center no-repeat
+      width: 20px
+      height: 20px
+    &__contacts
+      flex-direction: row-reverse
+      margin-right: 3rem
+    &__tel
+      margin-right: 2rem
+      margin-bottom: 0
+    &__body-inner
+      max-width: 90%
+@media (max-width: 670px) 
+  .header  
+    justify-content: center
+    &__top-inner
+      padding: 0rem 4rem 0rem 1.8rem
+    &__body-inner
+      max-width: 100%  
+      padding: 18rem .5rem 0rem
+      text-align: center
+    &__title
+      font-size: 2.4rem
+      font-weight: 700
+      line-height: 3.4rem
+      
+    &__subtitle
+      display: none
+    &__text
+      display: none
+@media (max-width: 350px) 
+  .header  
+    &__top-inner
+      padding: 0rem 4rem 0rem .8rem

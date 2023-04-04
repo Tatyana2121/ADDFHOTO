@@ -1,0 +1,46 @@
+.burger
+  display: none
+
+@media (max-width: 950px) 
+  .burger
+    display: block
+    width: 32px
+    height: 32px
+    position: fixed
+    right: 16px
+    top: 7px
+    cursor: pointer
+    z-index: 20    
+    span
+      display: block
+      height: 3px
+      width: 28px
+      border-radius: 20px
+      text-align: center
+      background-color: $accent-color
+      margin-bottom: 6px
+      transition: .5s
+  .burger-bg
+    display: none
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: #0f0f0fb3
+    z-index: 4
+  .burger--active    
+    span 
+      margin-bottom: 0
+      &:nth-child(1)
+        transform: translateY(9px) rotate(45deg)
+      &:nth-child(2)
+        display: none
+      &:nth-child(3)
+        transform: translateY(6px) rotate(-45deg)
+  .burger--active .burger-bg
+    display: block
+        
+@media (max-width: 350px) 
+  .burger
+    right: 8px

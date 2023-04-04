@@ -1,0 +1,29 @@
+html
+  font-size: 10px  
+body
+  font-family: 'Montserrat', sans-serif
+  font-weight: 600
+  color: $text-color-main  
+.container
+  max-width: 1440px
+  margin: 0 auto
+.button
+  font-size: 1.6rem
+  line-height: 2rem
+  letter-spacing: 3px
+  text-transform: uppercase
+  color: $text-color-white
+  background: $button-gradient
+  padding: 2.2rem 2.8rem
+  border-radius: 10px
+  transition: 0.8s
+  white-space: nowrap
+  &:hover
+    background: $button-gradient-hover
+  &:active
+    transform: scale(0.88)
+@media (max-width: 450px)
+  .button
+    padding: 1.9rem 1.8rem
+    font-size: 1.2rem
+    line-height: 1.7rem~
