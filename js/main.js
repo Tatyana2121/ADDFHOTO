@@ -12,6 +12,7 @@ const feedbackForm = document.querySelector('.form-inner'),
       overlay = document.querySelector('.overlay'),
       feedbackBtn = document.querySelector('.feedback-form__btn'),
       thanks = document.querySelector('.thanks')
+      
 headerBtn.addEventListener('click', function () {
   overlay.classList.toggle("hidden")
   feedbackForm.classList.toggle('hidden')
