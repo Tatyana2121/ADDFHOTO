@@ -70,8 +70,9 @@
     background-size: cover
   &__body-inner
     color: $text-color-header
-    max-width: 70%  
-    padding: 15rem 10rem 0rem
+    max-width: 71%  
+    padding: 0rem 10rem
+    margin: 25rem 0rem
   &__title
     font-size: 6.6rem
     font-weight: 700
@@ -96,7 +97,7 @@
     &__nav-item
       margin-right: 2.4rem
     &__body-inner
-      padding: 7rem 6rem 0rem
+      padding: 0rem 6rem
 @media (max-width: 1200px) 
   .header
     &__nav-item
@@ -118,6 +119,8 @@
         padding: 0.8rem 1.3rem
       &__tel
         margin-bottom: .6rem
+      &__body-inner
+        margin: 17rem 0rem
       &__title
         font-size: 4.8rem
         line-height: 5.2rem
@@ -141,7 +144,7 @@
       flex-direction: column
       align-items: flex-end      
     &__nav-item
-      margin-bottom: 1.6rem  
+      margin-bottom: 2.6rem  
       color: $text-color-white
       margin-right: 1.6rem
       &:last-child
@@ -169,7 +172,9 @@
       margin-right: 2rem
       margin-bottom: 0
     &__body-inner
-      max-width: 90%
+      max-width: 92%
+      margin: 25rem 0rem
+      padding: 0rem 0rem 0rem 6rem
 @media (max-width: 670px) 
   .header  
     justify-content: center
@@ -177,18 +182,28 @@
       padding: 0rem 4rem 0rem 1.8rem
     &__body-inner
       max-width: 100%  
-      padding: 18rem .5rem 0rem
+      padding: 0rem .5rem 
       text-align: center
-    &__title
-      font-size: 2.4rem
-      font-weight: 700
-      line-height: 3.4rem
       
     &__subtitle
       display: none
     &__text
       display: none
-@media (max-width: 350px) 
+@media (max-width: 600px) 
+  .header
+    &__title
+      font-size: 3.5rem
+      font-weight: 700
+      // line-height: 3.4rem
+@media (max-width: 470px) 
+  .header
+    &__title
+      font-size: 3rem
+
+@media (max-width: 400px) 
   .header  
     &__top-inner
       padding: 0rem 4rem 0rem .8rem
+    &__title
+      font-size: 2.4rem
+      line-height: 3.4rem

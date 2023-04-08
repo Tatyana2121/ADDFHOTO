@@ -1,23 +1,29 @@
 .hidden
   display: none
 .overlay
-  position: absolute
+  position: fixed
   top: 0
   left: 0
   right: 0
   bottom: 0
-  background: rgba(0, 0, 0, 0.6)
+  background: rgba(248, 240, 240, 0) #ffffff00
   backdrop-filter: blur(3px)
-  z-index: 4
+  z-index: 9
 .form-inner
-  margin: auto 0
   position: absolute
-  top: 20%
+  top: 50%
   left: 50%
-  transform: translateX(-50%)
-  max-width: 105rem
-  max-height: 100%
-  z-index: 5
+  transform: translate(-50%, -50%)
+  width: 105rem
+  z-index: 10
+.form-close
+  background-color: transparent
+  border: none
+  position: absolute
+  top: -40px
+  right: 0
+  &__grey
+    display: none
 .feedback-form 
   display: flex
   justify-content: space-between
@@ -25,12 +31,10 @@
   padding: 6rem 6rem 6rem 3rem
   border-radius: 15px
   background-color: white  
-  max-width: 105rem
-  margin: 0 auto
   &__img     
     margin-right: 2.5rem
     img
-      max-width: 46rem
+      max-width: 45rem
   &__title 
     font-size: 3.6rem
     line-height: 4.3rem
@@ -59,7 +63,7 @@
       font-size: 1.2rem
       line-height: 1.2rem
       color: $text-color-form-placeholder
-      // opacity: 0.8
+      opacity: 0.8
   &__btn 
     margin-bottom: 1.6rem
     width: 100%
@@ -74,24 +78,21 @@
     & > a
       text-decoration: underline
       color: $text-color-title
-
 .thanks
   display: flex
   justify-content: center
   align-items: center
-  position: absolute
+  position: fixed
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
   max-width: 100%
-  max-height: 100%
-  z-index: 5
-  background: url("../images/feedback-form-thanks.jpg") center no-repeat
+  z-index: 10
+  background: url("../images/feedback-form-thanks.jpg") center / cover no-repeat
   border-radius: 15px
-  overflow: hidden
   &__inner 
     padding: 8.8rem 8.3rem
-    max-width: 63rem
+    width: 63rem
     text-align: center
   &__title 
     font-size: 3.6rem
@@ -101,22 +102,24 @@
     font-size: 1.6rem
     line-height: 2.2rem
     font-weight: 500
-    opacity: 40%
+    opacity: .4
 .hidden-thanks
   display: none
 
-@media (max-width: 1100px) 
+@media (max-width: 1100px)
+  .form-inner
+    width: 84rem
   .feedback-form 
-    max-width: 90rem
     padding: 3rem 3rem 3rem 3rem
     &__img 
       margin-right: 1.5rem      
       img
-        max-width: 40rem
+        max-width: 30rem
 
-@media (max-width: 950px) 
-  .feedback-form 
-    max-width: 85rem
+@media (max-width: 900px) 
+  .form-inner
+    width: 74rem
+  .feedback-form     
     &__img 
       margin-right: 1.5rem      
       img
@@ -141,11 +144,18 @@
       font-weight: 400
       max-width: 37rem
 
-
-@media (max-width: 670px) 
-  .feedback-form 
-    flex-direction: column
+@media (max-width: 760px)
+  .form-close
+    top: 12px
+    right: 12px
+    &__grey
+      display: block
+    &__white
+      display: none
+  .form-inner
     max-width: 34rem
+  .feedback-form 
+    flex-direction: column  
     padding: 1.8rem 0rem
     &__img       
       margin-right: 0
@@ -171,3 +181,20 @@
       line-height: 1.3rem
       font-weight: 400
       max-width: 32rem
+  .thanks
+    &__inner 
+      padding: 9.8rem 2.3rem
+      width: 34rem
+    &__title 
+      font-size: 2.2rem
+      line-height: 2.6rem
+      margin-bottom: 1.6rem
+    &__text 
+      font-size: 1.4rem
+
+@media (max-width: 350px)
+  .form-inner
+    max-width: 31rem
+  .feedback-form 
+    &__text 
+      max-width: 30rem  
