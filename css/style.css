@@ -414,6 +414,9 @@ a {
     font-weight: 400;
     max-width: 32rem;
   }
+  .thanks {
+    background: url("../images/feedback-form-thanks-mobil.jpg") center/cover no-repeat;
+  }
   .thanks__inner {
     padding: 9.8rem 2.3rem;
     width: 34rem;
